@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAMPS Tissue Shipment Form</title>
+    <style>
+        body {
+            font-family: Cascadia code, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .level-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .level-group label {
+            margin: 0;
+            width: 150px;
+        }
+        .level-group input {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style= " color:#28a745; font-weight:bold; margin-bottom: 10px; position: relative; left:20%; padding:15px;">CHAMPS Tissue Shipment Data Input Form</h1>
+    <form id="dataForm">
+        <label for="serialNumber">Sl No:</label>
+        <input type="text" id="serialNumber" name="serialNumber"><br><br>
+        
+        <label for="idNumber1">CHAMPS ID:</label>
+        <input type="text" id="idNumber1" name="idNumber1"><br><br>
+        
+        <label for="idNumber2">Kit ID:</label>
+        <input type="text" id="idNumber2" name="idNumber2"><br><br>
+
+        <div id="levelInputs">
+            <div class="level-group">
+                <label for="level1">Cassette A:</label>
+                <input type="text" id="level1" name="level1">
+            </div>
+            <div class="level-group">
+                <label for="level2">Cassette B:</label>
+                <input type="text" id="level2" name="level2">
+            </div>
+            <div class="level-group">
+                <label for="level3">Cassette C:</label>
+                <input type="text" id="level3" name="level3">
+            </div>
+            <div class="level-group">
+                <label for="level4">Cassette D:</label>
+                <input type="text" id="level4" name="level4">
+            </div>
+            <div class="level-group">
+                <label for="level5">Cassette E:</label>
+                <input type="text" id="level5" name="level5">
+            </div>
+            <div class="level-group">
+                <label for="level6">Membrane:</label>
+                <input type="text" id="level6" name="level6">
+            </div>
+            <div class="level-group">
+                <label for="level7">Cord:</label>
+                <input type="text" id="level7" name="level7">
+            </div>
+            <div class="level-group">
+                <label for="level8">PL Parench:</label>
+                <input type="text" id="level8" name="level8">
+            </div>
+            <div class="level-group">
+                <label for="level9">PL Parench:</label>
+                <input type="text" id="level9" name="level9">
+            </div>
+        </div>
+
+        <button type="button" onclick="addData()">Add Data</button>
+        <button type="button" style = "width: 40%; background-color:#20a7db; position:relative; left:30%; margin-top: 10px;" onclick="generateSpreadsheet()">Generate Spreadsheet</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
