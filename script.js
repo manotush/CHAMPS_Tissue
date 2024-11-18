@@ -16,46 +16,46 @@ function addData() {
             switch (index + 1) {
                 case 1:
                     Tissue_Type = "Cassette A (Liver and Abdominal Organs)";
-                    Cassette_ID = `M0${Cass}.042`;
+                    Cassette_ID = `M${Cass}.042`;
                     break;
                 case 2:
                     Tissue_Type = "Cassette B (Right Lung)";
-                    Cassette_ID = `M0${Cass}.044`;
+                    Cassette_ID = `M${Cass}.044`;
                     break;
                 case 3:
                     Tissue_Type = "Cassette C (Left Thoracic Organs, Left Lung and Heart)";
-                    Cassette_ID = `M0${Cass}.046`;
+                    Cassette_ID = `M${Cass}.046`;
                     break;
                 case 4:
                     Tissue_Type = "Cassette D (Central Nervous System, Posterior Fossa and Fontanelle)";
-                    Cassette_ID = `M0${Cass}.048`;
+                    Cassette_ID = `M${Cass}.048`;
                     break;
                 case 5:
                     Tissue_Type = "Cassette E (Central Nervous System, Trans-nasal)";
-                    Cassette_ID = `M0${Cass}.050`;
+                    Cassette_ID = `M${Cass}.050`;
                     break;
                 case 6:
                     Tissue_Type = "Membrane";
-                    Cassette_ID = `M0${Cass}.080`;
+                    Cassette_ID = `M${Cass}.080`;
                     break;
                 case 7:
                     Tissue_Type = "Cord";
-                    Cassette_ID = `M0${Cass}.082`;
+                    Cassette_ID = `M${Cass}.082`;
                     break;
                 case 8:
                     Tissue_Type = "PL Parench";
-                    Cassette_ID = `M0${Cass}.084`;
+                    Cassette_ID = `M${Cass}.084`;
                     break;
                 case 9:
                     Tissue_Type = "PL Parench";
-                    Cassette_ID = `M0${Cass}.086`;
+                    Cassette_ID = `M${Cass}.086`;
                     break;
             }
 
             const newData = {
                 Sl_No,
-                CHAMPS_ID: `BDAA0${CHAMPS_ID}`,
-                Kit_ID: `M0${Kit_ID}`,
+                CHAMPS_ID: `BDAA${CHAMPS_ID}`,
+                Kit_ID: `M${Kit_ID}`,
                 Cassette_ID,
                 No_of_Specimens: `${Specimens} ${Specimens > 1 ? 'pieces' : 'piece'}`,
                 Tissue_Type,
